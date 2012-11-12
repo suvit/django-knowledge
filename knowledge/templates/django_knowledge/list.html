@@ -10,7 +10,9 @@
 
 <div class="dk-widget">
   {# dunno how to do translation on this nasty block... #}
-  <h3>Showing {{ counter }} results{% if search %} for <em>{{ search }}</em>{% endif %}{% if category %} in <em>{{ category.title }}</em> category{% endif %}:</h3>
+  <h3>{% blocktrans %}Showing {{ counter }} results{% endblocktrans %}
+      {% if search %}{% blocktrans %} for <em>{{ search }}</em>{% endblocktrans %}{% endif %}
+      {% if category %}{% blocktrans with category_title=category.title %}in <em>{{ category_title }}</em> category{% endblocktrans %}{% endif %}:</h3>
   <hr />
 
   {% include 'django_knowledge/question_list.html' with questions=questions.object_list %}
@@ -28,7 +30,7 @@
       <a href="?{% page_query request questions.previous_page_number %}">&larr; {% trans "previous" %}</a>
     {% endif %}
 
-    &nbsp; {% blocktrans with number=questions.number pages=questions.paginator.num_pages %}page {{ number }} of {{ page }}{% endblocktrans %} &nbsp;
+    &nbsp; {% blocktrans with number=questions.number pages=questions.paginator.num_pages %}page {{ number }} of {{ pages }}{% endblocktrans %} &nbsp;
 
     {% if questions.has_next %}
       <a href="?{% page_query request questions.next_page_number %}">{% trans "next" %} &rarr;</a>
