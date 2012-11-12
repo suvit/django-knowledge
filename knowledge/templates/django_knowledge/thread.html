@@ -63,7 +63,7 @@
 
 
   {% if form %}
-    {% include "django_knowledge/form.html" with submit_value="Respond to this question" submit_and="and check back often for updates." %}
+    {% include "django_knowledge/form.html" with submit_value=0|default:_("Respond to this question") submit_and=0|default:_("and check back often for updates.") %}
   {% else %}
     {% if question.locked %}
       <p class="center"><em>{% trans "This question has been closed." %}</em></p>

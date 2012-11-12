@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-12 13:04+0600\n"
+"POT-Creation-Date: 2012-11-12 13:25+0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Victor Safronovich <vsafronovich@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -104,9 +104,19 @@ msgstr "Ответы"
 
 #: .\templates\django_knowledge\ask.html.py:5
 #: .\templates\django_knowledge\ask.html.py:9
-#: .\templates\django_knowledge\list.html.py:44
+#: .\templates\django_knowledge\list.html.py:43
 msgid "Ask a Question"
 msgstr "Задайте вопрос"
+
+#: .\templates\django_knowledge\ask.html.py:13
+#: .\templates\django_knowledge\list.html.py:48
+msgid "Submit this support request"
+msgstr "Задать вопрос"
+
+#: .\templates\django_knowledge\ask.html.py:13
+#: .\templates\django_knowledge\list.html.py:48
+msgid "and we'll get back to you as soon as possible."
+msgstr "и мы ответим как можно быстрее"
 
 #: .\templates\django_knowledge\ask.html.py:15
 msgid "Please log in to ask a question."
@@ -133,34 +143,35 @@ msgstr "Начните вводить ваш вопрос тут."
 msgid "Search"
 msgstr "Поиск"
 
-#: .\templates\django_knowledge\list.html.py:13
+#: .\templates\django_knowledge\list.html.py:12
 #, python-format
 msgid "Showing %(counter)s results"
 msgstr "Найдено %(counter)s элементов"
 
-#: .\templates\django_knowledge\list.html.py:14
+#: .\templates\django_knowledge\list.html.py:13
 #, python-format
 msgid " for <em>%(search)s</em>"
 msgstr "для фразы <em>%(search)s</em>"
 
-#: .\templates\django_knowledge\list.html.py:15
+#: .\templates\django_knowledge\list.html.py:14
 #, python-format
 msgid "in <em>%(category_title)s</em> category"
 msgstr "в категории <em>%(category_title)s</em>"
 
-#: .\templates\django_knowledge\list.html.py:22
+#: .\templates\django_knowledge\list.html.py:21
 msgid "No results found."
 msgstr "Не найдены результаты."
 
-#: .\templates\django_knowledge\list.html.py:30
+#: .\templates\django_knowledge\list.html.py:29
 msgid "previous"
 msgstr "предыдущий"
 
-#: .\templates\django_knowledge\list.html.py:33
+#: .\templates\django_knowledge\list.html.py:32
+#, python-format
 msgid "page %(number)s of %(pages)s"
 msgstr "страница %(number)s из %(pages)s"
 
-#: .\templates\django_knowledge\list.html.py:36
+#: .\templates\django_knowledge\list.html.py:35
 msgid "next"
 msgstr "следующий"
 
@@ -210,6 +221,14 @@ msgstr "автор"
 #: .\templates\django_knowledge\thread.html.py:56
 msgid "No responses yet."
 msgstr "На данный момент ответов нет"
+
+#: .\templates\django_knowledge\thread.html.py:66
+msgid "Respond to this question"
+msgstr "Ответить на вопрос"
+
+#: .\templates\django_knowledge\thread.html.py:66
+msgid "and check back often for updates."
+msgstr "и проверьте обновления"
 
 #: .\templates\django_knowledge\thread.html.py:69
 msgid "This question has been closed."
