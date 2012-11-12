@@ -15,6 +15,7 @@ setup(
     install_requires=['Markdown>=2.1.1','Django>=1.4'],
     packages=['knowledge'],
     package_data={'knowledge': [
+      'locale/*/LC_MESSAGES/*',
       'migrations/*.py',
       'static/knowledge/css/*',
       'templates/django_knowledge/*.html',
