@@ -6,6 +6,12 @@ from django.utils.translation import ugettext_lazy as _
 from knowledge.managers import QuestionManager, ResponseManager
 from knowledge.signals import knowledge_post_save
 
+if settings.SLUG_URLS:
+    from django.utils.importlib import import_module
+    mod, function = settings.SLUG_SLUGIFY.rsplit('.', 1)
+    slugify = getattr(import_module(mod), function)
+
+
 STATUSES = (
     ('public', _('Public')),
     ('private', _('Private')),
@@ -170,8 +176,6 @@ class Question(KnowledgeBase):
 
     @models.permalink
     def get_absolute_url(self):
-        from django.template.defaultfilters import slugify
-
         if settings.SLUG_URLS:
             return ('knowledge_thread', [self.id, slugify(self.title)])
         else:

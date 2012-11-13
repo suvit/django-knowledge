@@ -14,3 +14,4 @@ ALERTS_FUNCTION_PATH = getattr(settings, 'KNOWLEDGE_ALERTS_FUNCTION_PATH',
 
 # misc
 SLUG_URLS = getattr(settings, 'KNOWLEDGE_SLUG_URLS', True)
+SLUG_SLUGIFY = getattr(settings, 'KNOWLEDGE_SLUG_SLUGIFY', 'django.template.defaultfilters.slugify')
