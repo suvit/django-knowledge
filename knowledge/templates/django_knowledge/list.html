@@ -9,7 +9,7 @@
 {% block knowledge_widgets %}
 
 <div class="dk-widget">
-  <h3>{% blocktrans %}Showing {{ counter }} results{% endblocktrans %}
+  <h3>{% blocktrans with counter=questions.paginator.count %}Showing {{ counter }} results{% endblocktrans %}
       {% if search %}{% blocktrans %} for <em>{{ search }}</em>{% endblocktrans %}{% endif %}
       {% if category %}{% blocktrans with category_title=category.title %}in <em>{{ category_title }}</em> category{% endblocktrans %}{% endif %}:</h3>
   <hr />
